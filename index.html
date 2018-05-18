@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<script src="main.js"></script>
+
+
+	<head>
+
+		<meta charset="utf-8">
+		<title> chris cornell </title> 
+	</head>
+	<body>
+	<div class="header"> <h1>Chris Cornell </h1> </div>
+
+  <div id="mydiv">
+  <div id="mydivheader"></div>
+<img src="file:///U:/java%20script/Capture.PNG" alt="image of my favorite singer" width="200"/>
+</div>
+<br>
+<div class= "secret"><p>01100011</p></div>
+		     <p>01101111</p>
+		     <p>01101100</p>
+		     <P>01110101</p>
+		     <P>01101101</p>
+		     <P>01101110</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<h2> bands chris cornell was in </h2>
+	<ul>
+		<li>audio slave </li>
+		<li>sound garden </li>
+		<li>temple of the dog </li>
+	</ul>
+	<h2>my favourite chris cornell songs </h2>
+	<ol>
+		<li>burden in my hand </li>
+		<li>show me how to live </li>
+		<li>shadow on the sun </li>
+	</ol>
+
+	<h3>how the grung stole seattle </h3>
+ 	grung came from seattles underground music scene and many bands like soundgarden pearljam alice in chains nirvana became popular </p>
+	
+
+	<a href="file:///U:/java%20script/repeat.html">Hmmm</a>
+
+	<p id="demo2"></p>
+
+ <button onclick="myFunction()">Try it</button>
+</body>
+
+<script>
+
+function myFunction() {
+    alert("easter egg please find");}
+
+//Make the DIV element draggagle:
+dragElement(document.getElementById(("mydiv")));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+
+
+
+
+var d = new Date();
+
+
+document.getElementById("demo2").innerHTML = d;
+</script>
+</html>
+
+
+
